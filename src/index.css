@@ -51,3 +51,113 @@ ul {
 }
 
 /* ============= PROJECT CSS =============== */
+
+nav {
+  --transition: 0.3s ease-in-out all;
+
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  .navHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .logo {
+      height: 2.5rem;
+    }
+
+    .navToggle {
+      font-size: 1.5rem;
+      color: #49a6e9;
+      background-color: transparent;
+      border-color: transparent;
+      transition: var(--transition);
+      cursor: pointer;
+
+      &:hover {
+        color: #334155;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .linksContainer {
+    overflow: hidden;
+    transition: var(--transition);
+
+    .links a {
+      color: #334155;
+      font-size: 1rem;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: var(--transition);
+
+      &:hover {
+        background-color: #c5e5fc;
+        color: #49a6e9;
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+  .socialIcons {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    .navCenter {
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+
+      .navHeader {
+        padding: 0;
+
+        .navToggle {
+          display: none;
+        }
+      }
+
+      .linksContainer {
+        height: auto !important;
+
+        .links {
+          display: flex;
+          gap: 1rem;
+
+          a {
+            padding: 0;
+
+            &:hover {
+              padding: 0;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      .socialIcons {
+        display: flex;
+        gap: 0.5rem;
+
+        a {
+          color: #49a6e9;
+          transition: var(--transition);
+
+          &:hover {
+            color: #8bcbf9;
+          }
+        }
+      }
+    }
+  }
+}
