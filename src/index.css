@@ -13,6 +13,17 @@ html {
 } /*16px*/
 
 :root {
+  /* colors */
+  --primary-100: #dae6f0;
+  --primary-200: #b5cde1;
+  --primary-300: #90b4d2;
+  --primary-400: #6b9bc3;
+  --primary-500: #4682b4;
+  --primary-600: #386890;
+  --primary-700: #2a4e6c;
+  --primary-800: #1c3448;
+  --primary-900: #0e1a24;
+
   --backgroundColor: #f8fafc;
   --textColor: #0f172a;
 }
@@ -70,14 +81,14 @@ nav {
 
     .navToggle {
       font-size: 1.5rem;
-      color: #49a6e9;
+      color: var(--primary-800);
       background-color: transparent;
       border-color: transparent;
       transition: var(--transition);
       cursor: pointer;
 
       &:hover {
-        color: #334155;
+        color: var(--primary-600);
         transform: rotate(90deg);
       }
     }
@@ -88,7 +99,7 @@ nav {
     transition: var(--transition);
 
     .links a {
-      color: #334155;
+      color: var(--primary-600);
       font-size: 1rem;
       text-transform: capitalize;
       letter-spacing: 1px;
@@ -97,8 +108,8 @@ nav {
       transition: var(--transition);
 
       &:hover {
-        background-color: #c5e5fc;
-        color: #49a6e9;
+        background-color: var(--primary-100);
+        color: var(--primary-800);
         padding-left: 1.5rem;
       }
     }
@@ -150,11 +161,11 @@ nav {
         gap: 0.5rem;
 
         a {
-          color: #49a6e9;
+          color: var(--primary-600);
           transition: var(--transition);
 
           &:hover {
-            color: #8bcbf9;
+            color: var(--primary-800);
           }
         }
       }
